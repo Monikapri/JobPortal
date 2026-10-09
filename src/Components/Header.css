@@ -1,0 +1,340 @@
+/* ==============================
+   HEADER / NAVBAR
+============================== */
+
+.custom-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  padding: 15px 0;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Logo */
+.custom-navbar .navbar-brand {
+  position: relative;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.custom-navbar .header-logo {
+  position: relative;
+  z-index: 10001;
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Desktop: transparent before scrolling */
+@media (min-width: 992px) {
+  .custom-navbar.navbar-transparent {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  .custom-navbar.navbar-scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ==============================
+   NAVIGATION LINKS
+============================== */
+
+.custom-navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: #212741;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 12px;
+  transition: color 0.2s ease;
+}
+
+/* Desktop transparent header links */
+@media (min-width: 992px) {
+  .custom-navbar.navbar-transparent .navbar-nav .nav-link {
+    color: #fff;
+  }
+
+  .custom-navbar.navbar-transparent .navbar-nav .nav-link:hover {
+    color: #e5e5e5;
+  }
+
+  /* Links after scrolling */
+  .custom-navbar.navbar-scrolled .navbar-nav .nav-link {
+    color: #212741;
+  }
+
+  .custom-navbar.navbar-scrolled .navbar-nav .nav-link:hover {
+    color: #1087eb;
+  }
+}
+
+/* ==============================
+   DROPDOWN TITLES AND ARROWS
+============================== */
+
+.custom-navbar .custom-nav-dropdown > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Bootstrap dropdown arrow */
+.custom-navbar .custom-nav-dropdown .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 0.35em solid currentColor;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/* Arrow color before and after scroll */
+@media (min-width: 992px) {
+  .custom-navbar.navbar-transparent .custom-nav-dropdown > .nav-link {
+    color: #fff;
+  }
+
+  .custom-navbar.navbar-scrolled .custom-nav-dropdown > .nav-link {
+    color: #212741;
+  }
+}
+
+/* ==============================
+   DROPDOWN MENU
+============================== */
+
+.custom-navbar .custom-nav-dropdown .dropdown-menu {
+  min-width: 220px;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Dropdown items */
+.custom-navbar .custom-nav-dropdown .dropdown-item {
+  padding: 10px 18px;
+  color: #212741;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Dropdown hover */
+.custom-navbar .custom-nav-dropdown .dropdown-item:hover,
+.custom-navbar .custom-nav-dropdown .dropdown-item:focus {
+  color: #1087eb;
+  background-color: #f3f8ff;
+}
+
+/* Dropdown divider */
+.custom-navbar .custom-nav-dropdown .dropdown-divider {
+  margin: 6px 0;
+  border-top-color: #e5e5e5;
+}
+
+/* ==============================
+   SIGN UP / CONTACT SUPPORT
+============================== */
+
+.custom-navbar .target-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border: 1px solid #1087eb;
+  border-radius: 4px;
+  background-color: #1087eb;
+  color: #fff !important;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Button hover */
+.custom-navbar .target-btn:hover {
+  background-color: #0875d1;
+  border-color: #0875d1;
+  color: #fff !important;
+}
+
+/* Button text becomes black after desktop scroll */
+@media (min-width: 992px) {
+  .custom-navbar.navbar-transparent .target-btn {
+    color: #fff !important;
+  }
+
+  .custom-navbar.navbar-scrolled .target-btn {
+    color: #000 !important;
+  }
+}
+
+/* ==============================
+   NAVBAR TOGGLE
+============================== */
+
+.custom-navbar .navbar-toggler {
+  border: 1px solid rgba(16, 135, 235, 0.4);
+  padding: 6px 10px;
+  box-shadow: none;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(16, 135, 235, 0.2);
+}
+
+/* ==============================
+   MOBILE NAVBAR
+============================== */
+
+@media (max-width: 991.98px) {
+  .custom-navbar,
+  .custom-navbar.navbar-transparent,
+  .custom-navbar.navbar-scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+  }
+
+  .custom-navbar .header-logo {
+    width: 170px;
+  }
+
+  .custom-navbar .navbar-collapse {
+    margin-top: 12px;
+    padding: 12px 15px 18px;
+    background-color: #fff !important;
+    border-radius: 6px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+  }
+
+  .custom-navbar .navbar-nav {
+    align-items: stretch !important;
+    gap: 0;
+  }
+
+  .custom-navbar .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 8px;
+    color: #212741 !important;
+  }
+
+  /* Mobile dropdown arrow */
+  .custom-navbar .custom-nav-dropdown > .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #212741 !important;
+  }
+
+  .custom-navbar .custom-nav-dropdown .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+    margin-top: 0;
+    padding: 4px 0;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .custom-navbar .custom-nav-dropdown .dropdown-item {
+    padding: 10px 18px;
+    white-space: normal;
+  }
+
+  /* Mobile buttons */
+  .custom-navbar .target-btn {
+    display: flex;
+    width: 100%;
+    margin: 8px 0 !important;
+    justify-content: center;
+    color: #fff !important;
+  }
+}
+
+/* ==============================
+   SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 575.98px) {
+  .custom-navbar .header-logo {
+    width: 145px;
+  }
+
+  .custom-navbar .navbar-brand {
+    margin-right: 10px;
+  }
+
+  .custom-navbar .navbar-collapse {
+    padding: 10px 8px 15px;
+  }
+
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .custom-navbar .target-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+/* Signup page: black navigation text */
+.signup-page .custom-navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.signup-page .custom-navbar .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+.signup-page .custom-navbar .navbar-toggler {
+  border-color: #1087eb;
+}
+
+/* Keep dropdown menu text black */
+.signup-page .custom-navbar .dropdown-menu .dropdown-item {
+  color: #212741 !important;
+}
+
+.signup-page .custom-navbar .dropdown-menu .dropdown-item:hover {
+  color: #1087eb !important;
+  background-color: #f3f8ff;
+}

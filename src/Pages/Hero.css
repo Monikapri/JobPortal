@@ -1,0 +1,318 @@
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  min-height: 650px;
+  padding: 130px 5% 60px;
+  background-color: #f3f8ff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================
+   SVG Background Shape
+   Desktop Only
+========================= */
+.hero-bg-shape {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .hero-bg-shape {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 75px);
+    fill: #1087eb;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* =========================
+   Left Content
+========================= */
+.leftpart {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.leftpart h1 {
+  max-width: 600px;
+  margin-bottom: 28px;
+  color: #212741;
+  font-size: clamp(32px, 4vw, 58px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* =========================
+   Search Form
+========================= */
+.hero-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-search input {
+  flex: 1 1 180px;
+  min-width: 0;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hero-search input:focus {
+  border-color: #1087eb;
+}
+
+.search-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1087eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #086fc4;
+}
+
+.leftpart p {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* =========================
+   Right Image
+========================= */
+.rightpart {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 991.98px) {
+  .hero-section {
+    gap: 25px;
+    min-height: 580px;
+    padding: 120px 4% 50px;
+  }
+
+  /* Hide SVG on tablet */
+  .hero-bg-shape {
+    display: none !important;
+  }
+
+  .leftpart h1 {
+    font-size: clamp(30px, 4.5vw, 44px);
+  }
+
+  .hero-search {
+    flex-direction: column;
+  }
+
+  .hero-search input,
+  .hero-search .search-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 767.98px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 110px 20px 35px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .leftpart {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+
+  .leftpart h1 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  /* Stack search fields */
+  .hero-search {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 12px;
+  }
+
+  .hero-search input,
+  .hero-search .search-btn {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  .hero-search input {
+    padding: 13px 14px;
+  }
+
+  .search-btn {
+    padding: 13px 20px;
+  }
+
+  .leftpart p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  /* Image container */
+  .rightpart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+    overflow: hidden;
+  }
+
+  /* Responsive image */
+  .hero-image {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+@media (max-width: 380px) {
+  .hero-section {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .leftpart h1 {
+    font-size: 29px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* SVG layers extend behind the header */
+.jc-decoration-item {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  left: 300px;
+}
+
+.jc-decoration-item svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.jc-decoration-item-1 {
+  z-index: -2;
+}
+
+.jc-decoration-item-1 path {
+  fill: #5eb6ff;
+}
+
+.jc-decoration-item-2 {
+  z-index: -1;
+}
+
+.jc-decoration-item-2 path {
+  fill: #1087eb;
+}
+
+/* Hero content stays above the SVG */
+.hero-section .leftpart,
+.hero-section .rightpart {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide decorations on tablet and mobile */
+@media (max-width: 991.98px) {
+  .jc-decoration-item {
+    display: none;
+  }
+}

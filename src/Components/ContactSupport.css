@@ -1,0 +1,139 @@
+.contact-support-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 60px;
+  background: #f3f8ff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contact-support-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 36px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-support-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.contact-support-heading h2 {
+  margin-bottom: 10px;
+  color: #212741;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.contact-support-heading p {
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-support-card .form-label {
+  color: #212741;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-support-card .form-control {
+  min-height: 46px;
+  border: 1px solid #dce3ec;
+  border-radius: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.contact-support-card textarea.form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-support-card .form-control:focus {
+  border-color: #1087eb;
+  box-shadow: 0 0 0 3px rgba(16, 135, 235, 0.12);
+}
+
+.contact-support-card .form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.contact-error {
+  margin-top: 6px;
+  color: #dc3545;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.contact-character-count {
+  margin-top: 6px;
+  color: #6c757d;
+  text-align: right;
+  font-size: 12px;
+}
+
+.contact-submit {
+  min-height: 48px;
+  border: 1px solid #1087eb !important;
+  border-radius: 5px;
+  background-color: #1087eb !important;
+  color: #fff !important;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.contact-submit:hover {
+  border-color: #0875d1 !important;
+  background-color: #0875d1 !important;
+}
+
+@media (max-width: 575.98px) {
+  .contact-support-section {
+    padding: 100px 0 35px;
+  }
+
+  .contact-support-card {
+    padding: 25px 20px;
+  }
+
+  .contact-support-heading h2 {
+    font-size: 25px;
+  }
+}
+
+/* Contact page header */
+.contact-page .custom-navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation links and dropdown arrows */
+.contact-page .custom-navbar .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Navbar toggle */
+.contact-page .custom-navbar .navbar-toggler {
+  border-color: #1087eb;
+}
+
+/* Dropdown menu text */
+.contact-page .custom-navbar .dropdown-menu .dropdown-item {
+  color: #212741 !important;
+}
+
+/* Dropdown hover */
+.contact-page .custom-navbar .dropdown-menu .dropdown-item:hover {
+  color: #1087eb !important;
+  background-color: #f3f8ff;
+}

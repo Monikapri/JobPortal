@@ -1,0 +1,143 @@
+.steps-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.steps-heading {
+  margin-bottom: 55px;
+}
+
+.steps-label {
+  display: inline-block;
+  color: #1087eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.steps-heading h2 {
+  color: #172b4d;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.step-card {
+  height: 100%;
+  padding: 15px 20px;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1087eb;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-icon-wrapper {
+  transform: translateY(-6px);
+}
+
+.step-circle-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.step-circle-svg circle {
+  stroke: #1087eb;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.step-card:hover .step-circle-svg circle {
+  stroke-dasharray: none;
+}
+
+.step-icon {
+  font-size: 35px;
+}
+
+.step-number {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1087eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.step-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.step-card h3 a {
+  color: #172b4d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.step-card h3 a:hover {
+  color: #1087eb;
+}
+
+.step-card p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .steps-section {
+    padding: 60px 0;
+  }
+
+  .steps-heading h2 {
+    font-size: 28px;
+  }
+
+  .steps-heading {
+    margin-bottom: 35px;
+  }
+}
+
+/* Dotted connection between step icons */
+@media (min-width: 768px) {
+  .step-card {
+    position: relative;
+  }
+
+  .step-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 66px;
+    left: calc(50% + 65px);
+    width: calc(100% - 130px);
+    border-top: 2px dotted #1087eb;
+    z-index: 0;
+  }
+
+  .step-icon-wrapper {
+    z-index: 1;
+    background: #ffffff;
+  }
+}

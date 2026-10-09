@@ -1,0 +1,127 @@
+.recent-jobs-section {
+  background: #f7f9fc;
+}
+
+.recent-jobs-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #202b3c;
+}
+
+.recent-jobs-section p {
+  color: #778195;
+}
+
+.recent-jobs-table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  min-width: 850px;
+}
+
+.recent-jobs-table td {
+  padding: 22px 18px;
+  background: #ffffff;
+  border: none;
+  border-top: 1px solid #edf0f5;
+  border-bottom: 1px solid #edf0f5;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.recent-jobs-table td:first-child {
+  border-left: 1px solid #edf0f5;
+  border-radius: 10px 0 0 10px;
+}
+
+.recent-jobs-table td:last-child {
+  border-right: 1px solid #edf0f5;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Hover the whole row */
+.recent-jobs-table .job-row:hover td {
+  background-color: #eef5ff;
+  box-shadow: 0 5px 18px rgba(35, 100, 200, 0.08);
+}
+
+.job-posted {
+  color: #8490a3;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.job-company {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 270px;
+}
+
+.company-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.job-title {
+  display: block;
+  color: #202b3c;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.job-title:hover {
+  color: #2864dc;
+}
+
+.company-name {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.job-salary,
+.job-location {
+  color: #68758a;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.job-type {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.full-time {
+  background: #e7f7ee;
+  color: #198754;
+}
+
+.part-time {
+  background: #fff3df;
+  color: #b7791f;
+}
+
+@media (max-width: 768px) {
+  .recent-jobs-section h2 {
+    font-size: 25px;
+  }
+
+  .recent-jobs-table td {
+    padding: 16px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recent-jobs-table td,
+  .job-title {
+    transition: none;
+  }
+}

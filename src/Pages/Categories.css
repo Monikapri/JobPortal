@@ -1,0 +1,338 @@
+.categories-section {
+  background-color: #f7f9fc;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.categories-heading {
+  gap: 20px;
+}
+
+.categories-heading h2 {
+  color: #212741;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.categories-heading p {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dce3ed;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #1087eb;
+  font-size: 18px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: #1087eb;
+  color: #fff;
+  border-color: #1087eb;
+  transform: scale(1.05);
+}
+
+.slider-arrow:focus-visible {
+  outline: 2px solid #1087eb;
+  outline-offset: 3px;
+}
+
+.categories-slider {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 12px 5px 22px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.categories-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card wrapper */
+.category-slide {
+  flex: 0 0 210px;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  padding: 20px 14px;
+
+  background-color: #fff;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(33, 39, 65, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Smooth hover effect */
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: #1087eb;
+  box-shadow: 0 12px 25px rgba(16, 135, 235, 0.16);
+}
+
+/* ==========================
+   Category Icon
+========================== */
+
+.category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+
+  border-radius: 10px;
+  background-color: #eaf4ff;
+  color: #1087eb;
+  font-size: 22px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  background-color: #1087eb;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* Icon color variations */
+.card-color-2 .category-icon {
+  background-color: #fff2e8;
+  color: #f08a35;
+}
+
+.category-card.card-color-2:hover .category-icon {
+  background-color: #f08a35;
+  color: #fff;
+}
+
+.card-color-3 .category-icon {
+  background-color: #e8f8ef;
+  color: #239b65;
+}
+
+.category-card.card-color-3:hover .category-icon {
+  background-color: #239b65;
+  color: #fff;
+}
+
+/* ==========================
+   Category Title
+========================== */
+
+.category-card h5 {
+  width: 100%;
+  color: #212741;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================
+   Open Positions
+========================== */
+
+.category-card p {
+  width: 100%;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+/* ==========================
+   Explore Jobs Link
+========================== */
+
+.category-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  color: #1087eb;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.category-link:hover {
+  color: #075fa8;
+}
+
+.category-link i {
+  transition: transform 0.3s ease;
+}
+
+.category-link:hover i {
+  transform: translate(2px, -2px);
+}
+
+/* ==========================
+   Tablet Responsive
+========================== */
+
+@media (max-width: 991.98px) {
+  .categories-section {
+    padding: 45px 0;
+  }
+
+  .categories-heading h2 {
+    font-size: 28px;
+  }
+
+  .category-slide {
+    flex-basis: 200px;
+  }
+
+  .category-card {
+    min-height: 185px;
+  }
+}
+
+/* ==========================
+   Mobile Responsive
+========================== */
+
+@media (max-width: 575.98px) {
+  .categories-section {
+    padding: 35px 0;
+  }
+
+  .categories-heading {
+    gap: 10px;
+    margin-bottom: 20px !important;
+  }
+
+  .categories-heading h2 {
+    font-size: 23px;
+  }
+
+  .categories-heading p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .slider-controls {
+    gap: 6px;
+  }
+
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .categories-slider {
+    gap: 14px;
+    padding: 10px 3px 18px;
+  }
+
+  .category-slide {
+    flex-basis: 185px;
+  }
+
+  .category-card {
+    min-height: 180px;
+    padding: 18px 12px;
+  }
+
+  .category-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .category-card h5 {
+    font-size: 14px;
+  }
+
+  .category-card p {
+    font-size: 11px;
+  }
+
+  .category-link {
+    font-size: 12px;
+  }
+}
+
+/* ==========================
+   Reduced Motion Accessibility
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .category-card,
+  .category-icon,
+  .category-link,
+  .category-link i,
+  .slider-arrow {
+    transition: none;
+  }
+
+  .category-card:hover,
+  .category-card:hover .category-icon,
+  .category-link:hover i,
+  .slider-arrow:hover {
+    transform: none;
+  }
+}

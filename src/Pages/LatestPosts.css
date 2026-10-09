@@ -1,0 +1,140 @@
+.latest-posts-section {
+  padding: 90px 0;
+  background: #f5f8fc;
+}
+
+.latest-posts-heading {
+  margin-bottom: 45px;
+}
+
+.latest-posts-label {
+  color: #1087eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.latest-posts-heading h2 {
+  color: #172b4d;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.latest-posts-heading p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.latest-post-card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5eaf1;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.latest-post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(23, 43, 77, 0.1);
+}
+
+.latest-post-image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.latest-post-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.latest-post-card:hover .latest-post-image {
+  transform: scale(1.05);
+}
+
+.latest-post-content {
+  padding: 25px;
+}
+
+.latest-post-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8a94a6;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.latest-post-date i {
+  color: #1087eb;
+}
+
+.latest-post-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.latest-post-title a {
+  color: #172b4d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.latest-post-title a:hover {
+  color: #1087eb;
+}
+
+.latest-post-description {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.latest-post-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1087eb;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.latest-post-readmore:hover {
+  color: #086bbd;
+}
+
+.latest-post-readmore i {
+  transition: transform 0.3s ease;
+}
+
+.latest-post-readmore:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+  .latest-posts-section {
+    padding: 60px 0;
+  }
+
+  .latest-posts-heading h2 {
+    font-size: 28px;
+  }
+
+  .latest-post-image {
+    height: 200px;
+  }
+
+  .latest-post-content {
+    padding: 22px;
+  }
+}

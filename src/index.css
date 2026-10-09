@@ -1,0 +1,12 @@
+html,
+body,
+#root {
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "Ubuntu", sans-serif !important;
+}

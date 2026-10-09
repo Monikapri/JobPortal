@@ -1,0 +1,48 @@
+.app-info-section {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.app-info-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.app-info-label {
+  display: inline-block;
+  color: #1087eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.app-info-content h2 {
+  color: #172b4d;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.app-info-content p {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+@media (max-width: 767px) {
+  .app-info-section {
+    padding: 60px 20px;
+  }
+
+  .app-info-content h2 {
+    font-size: 28px;
+  }
+
+  .app-info-content p {
+    font-size: 15px;
+  }
+}

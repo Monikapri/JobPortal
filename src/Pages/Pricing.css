@@ -1,0 +1,166 @@
+.pricing-section {
+  padding: 90px 0;
+  background: #f5f8fc;
+}
+
+.pricing-heading {
+  margin-bottom: 50px;
+}
+
+.pricing-label {
+  color: #1087eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pricing-heading h2 {
+  color: #172b4d;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.pricing-heading p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.pricing-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  background: #fff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(16, 135, 235, 0.12);
+}
+
+.pricing-card .card-body {
+  padding: 35px 25px;
+}
+
+.featured-plan {
+  border: 2px solid #1087eb;
+}
+
+.popular-badge {
+  background: #1087eb;
+  color: #fff;
+  text-align: center;
+  padding: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.plan-name {
+  color: #172b4d;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.plan-subtitle {
+  color: #1087eb;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 21px;
+}
+
+.plan-price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #172b4d;
+  margin-top: 22px;
+}
+
+.price-main {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.price-cents {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.price-period {
+  color: #8a94a6;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.pricing-card hr {
+  border-color: #e5eaf1;
+  margin: 25px 0;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #566176;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 17px;
+}
+
+.plan-features i {
+  color: #1087eb;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #1087eb;
+  border-radius: 7px;
+  background: #fff;
+  color: #1087eb;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn:hover,
+.pricing-btn-primary {
+  background: #1087eb;
+  border-color: #1087eb;
+  color: #fff;
+}
+
+.pricing-btn-primary:hover {
+  background: #0874ce;
+  border-color: #0874ce;
+}
+
+@media (max-width: 767px) {
+  .pricing-section {
+    padding: 60px 0;
+  }
+
+  .pricing-heading h2 {
+    font-size: 28px;
+  }
+
+  .pricing-card .card-body {
+    padding: 30px 22px;
+  }
+}
