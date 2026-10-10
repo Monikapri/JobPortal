@@ -16,7 +16,7 @@ import AppInfo from "./Pages/AppInfo";
 import Signup from "./Components/Signup";
 import "./App.css";
 import ContactSupport from "./Components/ContactSupport";
-
+import ScrollToTop from "./Components/ScrollToTop";
 import ChatWidget from "./Components/ChatWidget";
 
 function Home() {
@@ -78,6 +78,7 @@ function AppLayout() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppLayout />
     </BrowserRouter>
   );
